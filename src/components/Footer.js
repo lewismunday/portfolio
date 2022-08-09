@@ -10,12 +10,7 @@ export default function Footer() {
             Lewis Munday - Copyright © {new Date().getFullYear()}
             </a>
             <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-            <a href="#projects" className="mr-5 hover:text-white">
-                Past Work
-            </a>
-            <a href="https://blog.lewismunday.co.uk" className="mr-5 hover:text-white">
-                Blog
-            </a>
+                <a target={"_blank"} href={'https://www.github.com/lewismunday'}><Icon icon="akar-icons:github-fill" /></a>
             </nav>
             <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
                 <Icon icon="mdi:spotify" color="#1db954" />
