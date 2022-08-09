@@ -17,6 +17,9 @@ export default function Navbar() {
                     <a href="https://blog.lewismunday.co.uk" className="mr-5 hover:text-white">
                         Blog
                     </a>
+                    <a href={"https://www.lewismunday.co.uk/CV"} className="mr-5 hover:text-white">
+                        CV
+                    </a>
                 </nav>
                 <a
                     href="mailto:lewisjohnmunday@gmail.com"
