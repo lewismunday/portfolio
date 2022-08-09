@@ -12,9 +12,8 @@ export default function Projects() {
                         Projects I've Built
                     </h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-                        facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-                        fuga dolore.
+                        Below is a list of some of the projects I've built. These projects are available on my site.
+                        To see other projects, please visit my <a href="https://github.com/lewismunday" className="text-green-500">GitHub</a>.
                     </p>
                 </div>
                 <div className="flex flex-wrap -m-4">
