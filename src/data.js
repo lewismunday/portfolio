@@ -5,7 +5,7 @@ export const projects = [
         description:
             "A lightweight, online CSV to JSON conversion tool",
         image: "./csv2d.png",
-        link: "https://www.lewismunday.co.uk/csv2json",
+        link: "/csv2json",
         source: "https://github.com/lewismunday/csv2json",
     },
     {
@@ -14,7 +14,7 @@ export const projects = [
         description:
             "The source code for my portfolio site.",
         image: "./portfolio.jpg",
-        link: "https://www.lewismunday.co.uk/",
+        link: "/",
         source: "https://github.com/lewismunday/portfolio",
     }
 ];

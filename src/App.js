@@ -1,19 +1,16 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import CSV2JSON from "./components/CSV2JSON";
 
 function App() {
   return (
-      <main className="text-gray-400 bg-gray-900 body-font">
-        <Navbar />
-        <About />
-        <Projects />
-        <Contact />
-          <Footer />
-      </main>
+      <BrowserRouter>
+          <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path={"/csv2json"} element={<CSV2JSON />} />
+          </Routes>
+        </BrowserRouter>
   );
 }
 
