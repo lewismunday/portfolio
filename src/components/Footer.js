@@ -12,7 +12,7 @@ export default function Footer() {
             <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
                 <a rel={"noreferrer"} target={"_blank"} href={'https://www.github.com/lewismunday'}><Icon icon="akar-icons:github-fill" /></a>
                 <p>&nbsp;</p>
-                <a rel="me" href="https://mas.to/@lewis"><Icon icon="akar-icons:mastodon-fill"/></a>
+                <a rel={"me noreferrer"} target={"_blank"} href="https://mas.to/@lewis"><Icon icon="akar-icons:mastodon-fill"/></a>
             </nav>
             <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
                 <Icon icon="mdi:spotify" color="#1db954" />
