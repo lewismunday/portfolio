@@ -15,13 +15,13 @@ export default function Navbar() {
                     <a href={"#projects"} className="mr-5 hover:text-white">
                         Past Work
                     </a>
-                    <a href="https://blog.lewismunday.co.uk" className="mr-5 hover:text-white">
-                        Blog
-                    </a>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href={"#"} className="mr-5 hover:text-white cursor-not-allowed">
-                        CV
-                    </a>
+                    {/*<a href="https://blog.lewismunday.co.uk" className="mr-5 hover:text-white">*/}
+                    {/*    Blog*/}
+                    {/*</a>*/}
+                    {/*/!* eslint-disable-next-line jsx-a11y/anchor-is-valid *!/*/}
+                    {/*<a href={"#"} className="mr-5 hover:text-white cursor-not-allowed">*/}
+                    {/*    CV*/}
+                    {/*</a>*/}
                 </nav>
                 <a
                     href="mailto:lewisjohnmunday@gmail.com"

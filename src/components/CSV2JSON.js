@@ -81,6 +81,14 @@ export default function Main() {
         document.body.removeChild(element);
     }
 
+    // On paste, replace tabs with commas.
+    const handlePaste = (e) => {
+        e.preventDefault();
+        let text = e.clipboardData.getData("text/plain");
+        text = text.replace(/\t/g, ",");
+        document.execCommand("insertHTML", false, text);
+    }
+
 
     return (
         <main className="text-gray-400 bg-gray-900 body-font">
@@ -115,7 +123,7 @@ export default function Main() {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center p-5">
-                    <textarea className="text-left text-xl font-bold text-white-800" rows="10" cols="50" id="message" name="message" value={message} onChange={handleMessageChange}></textarea>
+                    <textarea className="text-left text-xl font-bold text-white-800" rows="10" cols="50" id="message" name="message" value={message} onChange={handleMessageChange} onPaste={handlePaste} ></textarea>
                 </div>
                 <div className="flex flex-col justify-center items-center p-5">
                     <button className="text-center text-xl font-bold text-white-800" onClick={handleConvert}>Convert</button>
