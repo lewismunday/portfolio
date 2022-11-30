@@ -20,7 +20,7 @@ export default function URLShortener() {
         .then(response => response.json())
         .then(data => {
             // Set the value of the shortURL input to the shortURL returned from the API.
-            document.getElementById("url").value = "w2.fyi/" + data.short_url;
+            document.getElementById("url").value = "www.w2.fyi/" + data.short_url;
         }
         )
         let button = document.getElementById("btn");
