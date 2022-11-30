@@ -8,7 +8,7 @@ export default function URLShortener() {
     const handleClick = () => {
         const longURL = document.getElementById("url").value;
         // Create an API post request to "https://api.mun.day/shorten" with the longURL as the body.
-        fetch("http://w2.fyi/api/shorten", {
+        fetch("https://w2.fyi/api/shorten", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
