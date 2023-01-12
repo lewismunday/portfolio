@@ -6,6 +6,14 @@ import {Button} from "@material-tailwind/react";
 
 export default function URLShortener() {
     const handleClick = () => {
+        let button = document.getElementById("btn");
+        button.classList.add("animate-pulse");
+        button.classList.add("bg-indigo-500");
+        button.classList.add("text-white");
+        button.classList.add("border-transparent");
+        button.classList.add("hover:bg-indigo-600");
+        button.classList.add("hover:border-transparent");
+        button.innerHTML = "Shortening...";
         const longURL = document.getElementById("url").value;
         // Create an API post request to "https://api.mun.day/shorten" with the longURL as the body.
         fetch("https://www.w2.fyi/api/shorten", {
@@ -21,15 +29,15 @@ export default function URLShortener() {
         .then(data => {
             // Set the value of the shortURL input to the shortURL returned from the API.
             document.getElementById("url").value = "www.w2.fyi/" + data.short_url;
+            let button = document.getElementById("btn");
+            button.classList.remove("bg-blue-500");
+            button.classList.add("bg-green-500");
+            button.innerHTML = "<Icon icon='ant-design:check-circle-outlined' className='w-5 h-5' /> Shortened";
+            button.disabled = true;
+            // Make the input background color white.
+            document.getElementById("url").style.backgroundColor = "white";
         }
         )
-        let button = document.getElementById("btn");
-        button.classList.remove("bg-blue-500");
-        button.classList.add("bg-green-500");
-        button.innerHTML = "<Icon icon='ant-design:check-circle-outlined' className='w-5 h-5' /> Shortened";
-        button.disabled = true;
-        // Make the input background color white.
-        document.getElementById("url").style.backgroundColor = "white";
 
     }
 
