@@ -18,6 +18,15 @@ export const projects = [
         source: "https://github.com/lewismunday/csv2json",
     },
     {
+        title: "Discord ChatGPT Bot",
+        subtitle: "A Discord bot that uses GPT-3 to generate text",
+        description:
+            "A blog post about how I created a Discord bot that uses OpenAI's ChatGPT to generate text",
+        image: "./discord-chatgpt-blog.png",
+        link: "www.w2.fyi/3pvBO7",
+        source: "https://github.com/lewismunday/discord-chatgpt-tutorial",
+    },
+    {
         title: "Portfolio Site",
         subtitle: "Source for this site",
         description:
