@@ -1,5 +1,4 @@
-import React from "react";
-import { useState} from "react";
+import React, { useState } from "react";
 import {Icon} from "@iconify/react/dist/iconify";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -9,7 +8,6 @@ export default function Main() {
 
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
-        console.log(message);
     }
 
     const handleConvert = (e) => {
@@ -24,52 +22,35 @@ export default function Main() {
                 json[line[0]] = line.slice(1);
             }
         }
-        // If the JSON object value is an array iterate through the JSON object value array and remove any empty values.
+
         for (let key in json) {
             if (Array.isArray(json[key])) {
-                for (let i = 0; i < json[key].length; i++) {
-                    if (json[key][i] === "") {
-                        json[key].splice(i, 1);
-                    }
-                }
+                json[key] = json[key].filter(item => item !== "");
             }
         }
-        // Remove the last key value pair from the JSON object
+
         let lastKey = Object.keys(json).pop();
         delete json[lastKey];
         setMessage(JSON.stringify(json));
     }
 
-    // When the reset button is clicked, the page will reload.
     const handleReset = () => {
         window.location.reload();
     }
-    // When the copy button is clicked, the text area will be copied to the clipboard.
+
     const handleCopy = (e) => {
         e.preventDefault();
-        let textarea = document.createElement("textarea");
-        textarea.value = message;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        textarea.remove();
-        // Show the alert message
-        let alert = document.getElementById("alert");
-        alert.classList.add("opacity-0");
-        alert.classList.add("transition-opacity");
-        alert.classList.add("duration-500");
-        alert.classList.add("ease-in-out");
-        alert.classList.add("delay-500");
-        alert.classList.add("opacity-100");
-        setTimeout(() => {
+        navigator.clipboard.writeText(message).then(() => {
+            let alert = document.getElementById("alert");
+            alert.classList.remove("opacity-0");
+            alert.classList.add("opacity-100");
+            setTimeout(() => {
                 alert.classList.remove("opacity-100");
                 alert.classList.add("opacity-0");
-            }
-            , 5000);
-
+            }, 5000);
+        });
     }
 
-    // When the download button is clicked, the text area will be downloaded as a .json file.
     const handleDownload = (e) => {
         e.preventDefault();
         let element = document.createElement('a');
@@ -81,12 +62,11 @@ export default function Main() {
         document.body.removeChild(element);
     }
 
-    // On paste, replace tabs with commas.
     const handlePaste = (e) => {
         e.preventDefault();
         let text = e.clipboardData.getData("text/plain");
         text = text.replace(/\t/g, ",");
-        document.execCommand("insertHTML", false, text);
+        setMessage(text);
     }
 
 
