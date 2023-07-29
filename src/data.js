@@ -17,14 +17,15 @@ export const projects = [
         link: "/csv2json",
         source: "https://github.com/lewismunday/csv2json",
     },
+
     {
-        title: "Discord ChatGPT Bot",
-        subtitle: "A Discord bot that uses GPT-3 to generate text",
+        title: "Business Chatbot",
+        subtitle: "Demo of a business chatbot",
         description:
-            "A blog post about how I created a Discord bot that uses OpenAI's ChatGPT to generate text",
-        image: "./discord-chatgpt-blog.png",
-        link: "www.w2.fyi/3pvBO7",
-        source: "https://github.com/lewismunday/discord-chatgpt-tutorial",
+            "Demo of a basic chatbot using OpenAI's GPT-3 API. It is trained on a dataset of the company and Directors & Officers (D&O) insurance.",
+        image: "./insync-chatbot.png",
+        link: "https://bright-rugelach-2e6510.netlify.app/",
+        source: "https://github.com/lewismunday/insync-chatbot-demo",
     },
     {
         title: "Portfolio Site",
